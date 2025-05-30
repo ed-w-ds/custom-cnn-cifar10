@@ -5,7 +5,8 @@ A PyTorch implementation of a custom CNN architecture achieving **92.75% accurac
 
 ## Architecture
 
-![Classifier Architecture](imgs/classifier.png)
+**Stem**
+![Model Stem](imgs/stem.png)
 
 **KitNet Model:**
 - Stem: 3→32 channels initial feature extraction
@@ -13,7 +14,8 @@ A PyTorch implementation of a custom CNN architecture achieving **92.75% accurac
 - Classifier: Multi-layer FC network with dropout
 - Progressive channels: [32, 64, 128, 256, 512, 768, 1024]
 
-![Model Stem](imgs/stem.png)
+**Classifier**
+![Classifier Architecture](imgs/classifier.png)
 
 **Key Features:**
 - 4 parallel convolutions per block with learned attention weights
