@@ -1,8 +1,11 @@
 # Custom CNN for CIFAR-10 Classification
-
 A PyTorch implementation of a custom CNN architecture achieving **92.75% accuracy** on the CIFAR-10 dataset.
 
+![Final Accuracy](imgs/final_acc.png)
+
 ## Architecture
+
+![Classifier Architecture](imgs/classifier.png)
 
 **KitNet Model:**
 - Stem: 3→32 channels initial feature extraction
@@ -10,11 +13,27 @@ A PyTorch implementation of a custom CNN architecture achieving **92.75% accurac
 - Classifier: Multi-layer FC network with dropout
 - Progressive channels: [32, 64, 128, 256, 512, 768, 1024]
 
+![Model Stem](imgs/stem.png)
+
 **Key Features:**
 - 4 parallel convolutions per block with learned attention weights
 - Bottleneck layers for channel reduction
 - Skip connections for residual learning
 - Batch normalisation and ReLU activations
+
+## Training Progress
+
+![Training Accuracy](imgs/acc_train.png)
+*Training accuracy progression over 200 epochs*
+
+![Test Accuracy](imgs/acc_test.png)
+*Validation accuracy progression over 200 epochs*
+
+![Training Loss](imgs/loss_train.png)
+*Training loss curve showing convergence*
+
+![Test Loss](imgs/loss_test.png)
+*Validation loss curve showing stable training*
 
 ## Training Methods
 
@@ -34,7 +53,6 @@ A PyTorch implementation of a custom CNN architecture achieving **92.75% accurac
 - Dropout: 0.3 (hidden), 0.2 (final layer)
 
 ## Configuration
-
 | Parameter | Value | Parameter | Value |
 |-----------|-------|-----------|-------|
 | Epochs | 200 | Batch Size | 128 |
@@ -44,7 +62,6 @@ A PyTorch implementation of a custom CNN architecture achieving **92.75% accurac
 | MixUp Alpha | 0.2 | CutMix Alpha | 1.0 |
 
 ## Results
-
 **Final Test Accuracy: 92.75%**
 
 The high accuracy was achieved through:
@@ -55,12 +72,10 @@ The high accuracy was achieved through:
 5. Proper regularisation (dropout, weight decay, early stopping)
 
 ## Files
-
 - `Coursework_final.ipynb` - Complete training pipeline
 - `checkpoints/` - Model checkpoints
 - `runs/` - TensorBoard logs
 
 ## References
-
 - He, K. et al. (2016). Deep Residual Learning for Image Recognition. CVPR.
 - Lin, T.-Y. et al. (2017). Focal Loss for Dense Object Detection. ICCV.
