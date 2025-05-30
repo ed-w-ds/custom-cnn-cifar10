@@ -1,6 +1,6 @@
 # Custom CNN for CIFAR-10 Classification
 
-A PyTorch implementation of a custom CNN architecture achieving **92.75% accuracy** on CIFAR-10 dataset.
+A PyTorch implementation of a custom CNN architecture achieving **92.75% accuracy** on the CIFAR-10 dataset.
 
 ## Architecture
 
@@ -14,14 +14,14 @@ A PyTorch implementation of a custom CNN architecture achieving **92.75% accurac
 - 4 parallel convolutions per block with learned attention weights
 - Bottleneck layers for channel reduction
 - Skip connections for residual learning
-- Batch normalization and ReLU activations
+- Batch normalisation and ReLU activations
 
 ## Training Methods
 
 **Data Augmentation:**
 - MixUp (α=0.2): Linear interpolation between samples
 - CutMix (α=1.0): Spatial patch mixing
-- Random crop, horizontal flip (p=0.3), color jitter (0.15), rotation (±10°)
+- Random crop, horizontal flip (p=0.3), colour jitter (0.15), rotation (±10°)
 
 **Loss Function:**
 - Focal Loss (γ=2.0) with label smoothing (0.1)
@@ -56,7 +56,7 @@ The high accuracy was achieved through:
 
 ## Files
 
-- `main.py` - Complete training pipeline
+- `Coursework_final.ipynb` - Complete training pipeline
 - `checkpoints/` - Model checkpoints
 - `runs/` - TensorBoard logs
 
